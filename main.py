@@ -1,4 +1,10 @@
-from gamehub import user, game, community, RegisterUserFromSmartScan
+from gamehub import (
+    user,
+    game,
+    community,
+    RegisterUserFromSmartScan,
+    generateSmartScanQRCode,
+)
 
 
 def main():
@@ -64,8 +70,8 @@ def main():
     # print()
 
     # Smart scan registration
-    RegisterUserFromSmartScan("Gokul,gokul@test.com")
-    RegisterUserFromSmartScan("John,john@test.com")
+    RegisterUserFromSmartScan(generateSmartScanQRCode("gokul", "gokul@test.com"))
+    RegisterUserFromSmartScan(generateSmartScanQRCode("John", "john@test.com"))
 
 
 if __name__ == "__main__":

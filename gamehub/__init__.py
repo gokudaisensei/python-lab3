@@ -22,7 +22,10 @@ from .community_features import (
     send_private_message as community_send_private_message,
 )
 
-from .smart_scan_final_register import RegisterUserFromSmartScan
+from .smart_scan_final_register import (
+    RegisterUserFromSmartScan,
+    generateSmartScanQRCode,
+)
 
 
 class user:
@@ -49,4 +52,10 @@ class community:
     send_message = community_send_private_message
 
 
-__all__ = ["user", "game", "community", "RegisterUserFromSmartScan"]
+__all__ = [
+    "user",
+    "game",
+    "community",
+    "RegisterUserFromSmartScan",
+    "generateSmartScanQRCode",
+]
